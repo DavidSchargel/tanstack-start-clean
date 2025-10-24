@@ -37,6 +37,12 @@ pnpm test -- --watch      # TDD watch mode
 pnpm test -- --coverage   # Coverage for PRs touching core flows
 ```
 
+### Uopdate Dependencies
+
+```bash
+pnpm up -L               # Update dependencies and update pnpm-lock.yaml
+```
+
 ### Component Management
 
 - Use `@/components/...` for imports
