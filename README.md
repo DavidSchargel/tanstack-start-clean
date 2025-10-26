@@ -37,23 +37,16 @@ pnpm test -- --watch      # TDD watch mode
 pnpm test -- --coverage   # Coverage for PRs touching core flows
 ```
 
-### Uopdate Dependencies
+### Update Dependencies
 
 ```bash
-pnpm up -L               # Update dependencies and update pnpm-lock.yaml
+`pnpm up -L `              # Update dependencies and update pnpm-lock.yaml
 ```
 
 ### Component Management
 
 - Use `@/components/...` for imports
 - Use `lucide-react` for icons: `import { Icon } from 'lucide-react'`
-- Use `cn()` from `@/lib/utils` for conditional class merging.
-- shadcn components are added to `src/components/ui/` via the CLI.
-
-```bash
-pnpx shadcn@latest init              # Initialize shadcn (if not already set up)
-pnpx shadcn@latest add <component>   # Scaffold UI primitives into src/components/ui
-```
 
 ### Setup
 
@@ -95,7 +88,7 @@ project/
 │   └── robots.txt       # Search engine directives
 ├── src/
 │   ├── components/      # Reusable React components
-│   ├── lib/             # Shared utilities (e.g., cn())
+│   ├── lib/             # Shared utilities
 │   ├── routes/          # File-based route modules
 │   │   ├── __root.tsx   # Root shell component
 │   │   ├── index.tsx    # Home page
@@ -105,7 +98,7 @@ project/
 ├── README.md            # Project readme
 ├── eslint.config.js     # ESLint configuration
 ├── prettier.config.js   # Prettier configuration
-├── components.json      # Shadcn UI configuration
+
 ├── package.json         # Dependencies and scripts
 ├── pnpm-lock.yaml       # Lockfile for pnpm
 ├── tsconfig.json        # TypeScript configuration
@@ -161,7 +154,6 @@ project/
 ## Configuration Notes
 
 - Vite + TanStack Start power the environment; `vite.config.ts` enables `vite-tsconfig-paths` and Tailwind via the Vite plugin.
-- `components.json` configures Shadcn scaffolding.
 - Tailwind config files can be added/generated if needed; defaults work via the Vite plugin.
 - Update `eslint.config.js` for project-wide lint adjustments as necessary.
 
